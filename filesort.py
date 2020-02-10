@@ -11,16 +11,18 @@ if(path):
 		else:
 			os.makedirs(r'D:\Chrome Sorted')
 			print("directory created - D:\\Chrome Sorted")
-		os.chdir(r'D:\Chrome Sorted') #enter the directory in which you want to perform the sort.
+		os.chdir(r'D:\Chrome Downloads') #enter the directory in which you want to perform the sort.
 		files = os.listdir(r'D:\Chrome Downloads')
 		folder_names = ['Setups','Zip','PDFs','rar_files','videos','Images']
 		for names in folder_names:
 			if(os.path.isdir(names)):
 				pass
 			else:
+				os.chdir(r'D:\Chrome Sorted')
 				os.makedirs(names)
 				q +=1
 				print("created directory - ",names)
+		os.chdir(r'D:\Chrome Downloads')
 		n = 0
 		total = 0
 		for i in files:
