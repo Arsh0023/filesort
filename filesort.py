@@ -34,4 +34,5 @@ for i in files:
 	n+=1
 print("total files - ",n)
 print("number of files moved - ",total)
+print("files left - ",n-total)
 print("All files are placed in their respective folder")
