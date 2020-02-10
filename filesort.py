@@ -2,8 +2,14 @@
 # filesort.py
 #sorts the files based on their type and then move them into the catogerized folders
 import os,re,shutil
-os.chdir(r'D:\Chrome downloads') #enter the directory in which you want to perform the sort.
+os.chdir(r'D:\Chrome Sorted') #enter the directory in which you want to perform the sort.
 files = os.listdir(r'D:\Chrome downloads')
+folder_names = ['Setups','Zip','PDFs','rar_files','videos','Images']
+for names in folder_names:
+	if(os.path.isdir(names)):
+		pass
+	else:
+		os.makedirs(names)
 n = 0
 total = 0
 for i in files:
