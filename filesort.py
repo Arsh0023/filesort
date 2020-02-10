@@ -15,10 +15,11 @@ if(path):
 		files = os.listdir(r'D:\Chrome Downloads')
 		folder_names = ['Setups','Zip','PDFs','rar_files','videos','Images']
 		for names in folder_names:
+			os.chdir(r'D:\Chrome Sorted')
 			if(os.path.isdir(names)):
 				pass
 			else:
-				os.chdir(r'D:\Chrome Sorted')
+				
 				os.makedirs(names)
 				q +=1
 				print("created directory - ",names)
